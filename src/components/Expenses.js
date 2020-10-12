@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
+
+import '../styles/Expenses.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import slikice from '../photos/slikice.jpg';
@@ -72,7 +74,7 @@ export class Expenses extends React.Component {
 
             </div>
           
-          <table class="table table-borderless">
+          <table class="tableExpenses">
             <thead class="elegant-color-dark white-text">
               <tr>
                 <th scope="col">Product Name</th>
@@ -97,69 +99,7 @@ export class Expenses extends React.Component {
                 <td>13.04.1998</td>
                 <td>25</td>
               </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>

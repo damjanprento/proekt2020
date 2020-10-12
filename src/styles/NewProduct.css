@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  }
+  
+  body {
+      background-color: #E5EDF5;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    width: 80%;
+    height: 750px;
+    padding: 30px;
+    padding-bottom: 40px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=number], input[type=date], select #country {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 2px solid;
+    border-color: #C6C6C6;
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #fff;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #8D8D8D;
+    margin-bottom: 15px;
+  }
+  
+  /* Set a style for the submit button */
+  .addproductbtn {
+    background-color: #1DD1A1;
+    color: #fff;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    Box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.17);
+  }
+  
+  .addproductbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  
+  .add {
+    background-color: #d6d6d6;
+    position: relative;  
+  
+    }
+  
+    .centriraj {
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 45%;  
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+  
+    .centriraj:nth-child(0) {
+        margin-right: 30px;
+        position: absolute;
+        top: 45%;
+        left: 45%;  
+        font-weight: bold;
+        font-size: 20px;
+    }
+  
+    
+    .centriraj:nth-child(1) {
+        margin-right: 20px;
+        width: 100%;
+        top: 45%;
+        left: 20%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+  
+    #krugce {
+        width: 50px;
+        height: 50px;
+    }
+  
+    .navbar-toggler, #navbar-list-4 {
+      float: right;
+      margin-left: 80%;
+    }
+  

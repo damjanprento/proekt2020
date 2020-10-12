@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
+
+import '../styles/Products.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import slikice from '../photos/slikice.jpg';
@@ -49,7 +51,7 @@ export class Products extends React.Component {
             </div>
           </div>
           
-          <table class="table table-borderless">
+          <table class="tableProducts">
             <thead class="elegant-color-dark white-text">
               <tr>
                 <th scope="col">Product Name</th>
@@ -61,141 +63,6 @@ export class Products extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
               <tr>
                 <td>Coca-Cola</td>
                 <td>Drink</td>

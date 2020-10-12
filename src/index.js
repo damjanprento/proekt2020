@@ -13,5 +13,5 @@ import { Register } from './components/Register';
 
 
 ReactDOM.render(
-    <Expenses />
+    <Products />
     , document.getElementById("root"));

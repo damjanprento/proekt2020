@@ -1,0 +1,131 @@
+* {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+    background-color: #E5EDF5;
+}
+
+#products {
+    margin-right: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #1DD1A1;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    color: #1DD1A1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    #products:hover {
+        opacity: 0.9;
+    }
+
+#expenses {
+    font-size: 15px;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #576574;
+    color: #576574;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    #expenses:hover {
+        opacity: 0.9;
+    }
+
+#productsTable {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2.5%;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#filter {
+    color: black;
+}
+
+#filterBy {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    border: 2px solid;
+    border-color: #C6C6C6;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.tableProducts {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    width: 100%;
+}
+
+    .tableProducts thead {
+        background-color: transparent;
+        color: #404040;
+        padding-bottom: 15px;
+        border-bottom: 1px solid;
+        border-color: #707070;
+    }
+
+    .tableProducts td {
+        color: #575757;
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+
+#fixedButton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(0, 71, 119);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+    #fixedButton:hover {
+        opacity: 0.9;
+    }
+
+    td a + a {
+        padding-left: 4em;
+    } 
+
+    a {
+        color: #575757;
+        text-decoration: none;
+    }
+    
+    a:hover 
+    {
+         color:#00A0C6; 
+         text-decoration:none; 
+         cursor:pointer;  
+    }

@@ -24,9 +24,9 @@ export class NewProduct extends React.Component {
 
             <button id="products">
               
-              <Link path='./Products'>
+              
                 Products 
-              </Link>
+              
             
             </button>
             
