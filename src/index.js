@@ -13,5 +13,5 @@ import { Register } from './components/Register';
 
 
 ReactDOM.render(
-    <Products />
+    <NewProduct />
     , document.getElementById("root"));

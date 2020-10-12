@@ -23,11 +23,7 @@ export class NewProduct extends React.Component {
             
 
             <button id="products">
-              
-              
                 Products 
-              
-            
             </button>
             
             <button id="expenses">Expenses</button>
@@ -49,9 +45,9 @@ export class NewProduct extends React.Component {
             
         </nav><br />
 
-        <div class="col-xl-12">
-            <h1>New Product</h1>
-        </div> 
+        
+        <h1 id="newProductHeader">New Product</h1>
+       
 
         <div class="container">
             <div class="row">

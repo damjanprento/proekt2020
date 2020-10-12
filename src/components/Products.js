@@ -36,7 +36,7 @@ export class Products extends React.Component {
         <div id="productsTable">
           <div class="d-flex bd-highlight">
             <div class="p-2 flex-grow-1">
-              <h1>Products</h1>
+              <h1 id="productsHeader">Products</h1>
             </div>
             <div class="p-2 bd-highlight">
               <span id="filter">Filter by:</span>

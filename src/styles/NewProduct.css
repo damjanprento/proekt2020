@@ -59,7 +59,8 @@
   }
   
   .addproductbtn:hover {
-    opacity: 1;
+    opacity: 0.9;
+
   }
   
   /* Add a blue text color to links */
@@ -67,10 +68,10 @@
     color: dodgerblue;
   }
   
-  h1 {
-      text-align: center;
+  #newProductHeader {
       text-transform: uppercase;
       font-weight: bold;
+      margin-left: 20.3%;
   }
   
   .add {
