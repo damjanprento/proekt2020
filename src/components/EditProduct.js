@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, NavLink , Link } from "react-router-dom";
 
-
 import '../styles/NewProduct.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -13,14 +12,14 @@ import { Products } from './Products';
 import { Expenses } from './Expenses';
 
 
-export class NewProduct extends React.Component {
+export class EditProduct extends React.Component {
 
   render() {
     return (
         
       <div>
       <br /> <br />
-      <h1 id="newProductHeader">New Product</h1>
+      <h1 id="newProductHeader">Edit Product</h1>
        
         <div class="newProductForm">
             <div class="row">
@@ -37,14 +36,14 @@ export class NewProduct extends React.Component {
                     <label>Product Price</label> <br />
                     <input type="text" id="productPrice"/> <br />
 
-                    <button class="addproductbtn">Create Product</button>
+                    <button class="addproductbtn">Update Product</button>
                 </div>
                 <div class="col-xl-6 add">
                     <div class="centriraj"> 
                         
                         <FontAwesomeIcon id="krugce" icon={faPlusCircle}></FontAwesomeIcon> <br />
                         
-                        <i>You are creating a new product</i>
+                        <i>You are editing an existing product</i>
                         
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 
 import '../styles/Products.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -14,7 +14,7 @@ export class Products extends React.Component {
   render() {
     return (
         
-      <div id="app">
+      <div>
 
         <div id="productsTable">
           <div class="d-flex bd-highlight">
@@ -80,7 +80,10 @@ export class Products extends React.Component {
           </table>
         </div>
 
-        <button id="fixedButton">New Product</button>
+        <Link to='/newproduct'>
+          <button id="fixedButton">New Product</button>
+        </Link>
+        
 
       </div>
     )

@@ -15,7 +15,7 @@ export class Expenses extends React.Component {
   render() {
     return (
         
-      <div id="app">
+      <div>
 
         <div id="productsTable">
 

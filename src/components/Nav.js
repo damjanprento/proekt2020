@@ -17,11 +17,11 @@ export class Nav extends React.Component {
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
                     <Link to='/products'>
-                        <button id="expenses">Products</button>
+                        <button id="products">Products</button>
                     </Link>
                     
                     <Link to='/expenses'>
-                        <button id="products">Expenses</button>
+                        <button id="expenses">Expenses</button>
                     </Link>
                     
                 

@@ -7,16 +7,17 @@
       background-color: #E5EDF5;
   }
   
-  /* Add padding to containers */
-  .container {
-    width: 80%;
+  .newProductForm {
+    width: 60%;
     height: 750px;
     padding: 30px;
-    padding-bottom: 40px;
+    margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: 20%;
     background-color: white;
     border-radius: 5px;
     position: relative;
+    
   }
   
   /* Full-width input fields */
