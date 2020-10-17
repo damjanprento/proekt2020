@@ -6,41 +6,6 @@ body {
     background-color: #E5EDF5;
 }
 
-#products {
-    margin-right: 10px;
-    font-size: 15px;
-    background-color: transparent;
-    border: 2px solid;
-    border-color: #1DD1A1;
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    color: #1DD1A1;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-    #products:hover {
-        opacity: 0.9;
-    }
-
-#expenses {
-    font-size: 15px;
-    background-color: transparent;
-    border: 2px solid;
-    border-color: #576574;
-    color: #576574;
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-    #expenses:hover {
-        opacity: 0.9;
-    }
-
 .btn {
     background-color: #1DD1A1;
     color: #fff;
