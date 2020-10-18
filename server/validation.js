@@ -1,4 +1,5 @@
 //VALIDATION
+const { required } = require('@hapi/joi');
 const Joi = require('@hapi/joi');
 
 //Register Validation
