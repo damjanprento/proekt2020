@@ -26,12 +26,23 @@ export class Expenses extends React.Component {
                 <div class="p-2 bd-highlight">
                     
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary">
-                            <input type="radio" id="monthly" autocomplete="off" checked /> Monthly
+                      <form>
+                      <label>
+                        <div id="kopcence1">
+                            <input class="switch" type="radio" id="monthly" name="switch" /> 
+                            <span class="btn-monthly">Monthly</span>
+                        </div>
                         </label>
-                        <label class="btn btn-secondary">
-                            <input type="radio" id="yearly" autocomplete="off" disabled/> Yearly
+
+                        <label id="kopcence2">
+                          <div>
+                            <input class="switch" type="radio" id="yearly" name="switch" /> 
+                            <span class="btn-yearly">Yearly</span>
+                          </div>
+                            
                         </label>
+                      </form>
+                        
                     </div>
                 </div>
 

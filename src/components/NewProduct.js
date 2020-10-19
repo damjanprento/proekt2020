@@ -25,7 +25,7 @@ export class NewProduct extends React.Component {
         <div class="newProductForm">
             <div class="row">
 
-                <div class="col-xl-6">
+                <div class="col-xl-6 form">
                     <label>Product Name</label> <br />
                     <input type="text" id="productName"/> <br />
                     <label>Product Description</label> <br />

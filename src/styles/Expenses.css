@@ -18,11 +18,30 @@ body {
 }
 
 .btn:active {
-    background-color: #1DD1A1
+    background-color: #1DD1A1;
 }
 
 .btn:disabled {
     background-color: #C9E5DD;
+}
+
+#kopcence1, #kopcence2 {
+    padding-left: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: #1DD1A1;
+}
+
+input#monthly:checked + .btn-monthly{
+    background-color: blue;
+}
+
+input#yearly:checked + #kopcence2{
+    background-color: red;   
+}
+
+.switch {
+    display: none;
 }
 
 #months {

@@ -9,8 +9,7 @@
   
   .newProductForm {
     width: 60%;
-    height: 750px;
-    padding: 30px;
+    /* height: 750px; */
     margin-bottom: 50px;
     margin-top: 50px;
     margin-left: 20%;
@@ -18,6 +17,10 @@
     border-radius: 5px;
     position: relative;
     
+  }
+
+  .form {
+    padding: 50px;
   }
   
   /* Full-width input fields */
@@ -82,33 +85,15 @@
     }
   
     .centriraj {
-        margin: 0;
-        position: absolute;
-        top: 45%;
-        left: 45%;  
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-  
-    .centriraj:nth-child(0) {
-        margin-right: 30px;
-        position: absolute;
-        top: 45%;
-        left: 45%;  
-        font-weight: bold;
-        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
   
     
-    .centriraj:nth-child(1) {
-        margin-right: 20px;
-        width: 100%;
-        top: 45%;
-        left: 20%;
-        font-weight: bold;
-        font-size: 20px;
-    }
-  
     #krugce {
         width: 50px;
         height: 50px;
