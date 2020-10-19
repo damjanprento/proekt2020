@@ -6,7 +6,7 @@ const {registerValidation, loginValidation } = require('../validation');
 const { valid } = require('@hapi/joi');
 
 router.post('/register', async (req, res) => {
-    
+
     //Validating data before making a user
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(res.send(error.details[0].message));
@@ -15,14 +15,14 @@ router.post('/register', async (req, res) => {
     const emailExist = await User.findOne({email: req.body.email})
     if(emailExist) return res.status(400).send('Email already exists');
 
-    //HASHING THE PASSWORD
+    //Hashing the password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
 
     //Create a new user
     const user = new User({
-        firstName: req.body.fristName,
+        firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         dateOfBirth: req.body.dateOfBirth,

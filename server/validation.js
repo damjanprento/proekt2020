@@ -11,7 +11,7 @@ const registerValidation = (data) => {
         dateOfBirth: Joi.string().required(),
         telephone: Joi.number().min(6).required(),
         country: Joi.string().required(),
-        password: Joi.string().min(6).required(),
+        password: Joi.string().min(6).required()
     });
     return schema.validate(data);
 };
