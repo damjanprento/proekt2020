@@ -1,16 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, NavLink , Link } from "react-router-dom";
-
 
 import '../styles/NewProduct.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import slikice from '../photos/slikice.jpg';
-
-import { Products } from './Products';
-import { Expenses } from './Expenses';
 
 
 export class NewProduct extends React.Component {

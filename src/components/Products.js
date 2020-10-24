@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import '../styles/Products.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import slikice from '../photos/slikice.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 

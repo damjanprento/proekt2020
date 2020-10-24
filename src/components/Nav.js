@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import '../styles/Nav.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import slikice from '../photos/slikice.jpg';
-
-import { Products } from './Products';
-import { Expenses } from './Expenses';
 
 
 export class Nav extends React.Component {

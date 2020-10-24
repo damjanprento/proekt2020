@@ -1,14 +1,7 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
 
-import $ from 'jquery'; 
 import '../styles/Expenses.css';
 import 'bootstrap/dist/css/bootstrap.css';
-
-import slikice from '../photos/slikice.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-
 
 export class Expenses extends React.Component {
 

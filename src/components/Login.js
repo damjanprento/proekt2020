@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/Login.css';
 

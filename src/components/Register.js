@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/Register.css';
 
@@ -11,7 +10,7 @@ export class Register extends React.Component {
         
       <div id="app">
         
-        <div class="container-fluid">
+        <div className="container-fluid">
           <form id="registerForm">
             <label>First Name</label> 
             <input type="text" id="firstName"/> 
@@ -24,7 +23,7 @@ export class Register extends React.Component {
             <label>Telephone</label> <br />
             <input type="text" id="mobile"/> <br />
             <label>Country</label> 
-            <select id="country" name="country" class="form-control">
+            <select id="country" name="country" className="form-control">
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Åland Islands">Åland Islands</option>
                   <option value="Albania">Albania</option>
@@ -272,11 +271,11 @@ export class Register extends React.Component {
               </select> <br />
             <label>Password</label> 
             <input type="password" id="password"/> 
-            <button class="registerbtn" type="submit">Register</button>
+            <button className="registerbtn" type="submit">Register</button>
           </form>
         </div>
 
-        <div class="container signin">
+        <div className="container signin">
           <p id="signIn">Or if you already have an account, <a href="Login.js">Sign in</a>.</p>
         </div>
         
