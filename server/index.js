@@ -17,6 +17,7 @@ useUnifiedTopology: true }, () => console.log('Connected to DB!')
 
 //Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 //Route Middlewares
 app.use('/api/user', authRoute);
