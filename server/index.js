@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 //Import Routes
 const authRoute = require('./routes/auth');
+const PORT = process.env.PORT || 3001;
 
 dotenv.config({path: '.env'});
 
@@ -22,4 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 //Route Middlewares
 app.use('/api/user', authRoute);
 
-app.listen(3001, () => console.log('Server up and running!'));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('../build'));
+}
+
+app.listen(PORT, () => console.log('Server up and running!'));
