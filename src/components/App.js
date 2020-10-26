@@ -32,6 +32,7 @@ export class App extends React.Component {
   };
 
   submit = (event) => {
+    
     event.preventDefault();
 
     const payload = {
@@ -44,16 +45,12 @@ export class App extends React.Component {
       password: this.state.password
     };
 
-    axios({
-      url: 'http://localhost:3001/api/user/register',
-      method: 'POST',
-      data: payload
-    })
+    axios.post('http://localhost:3001/api/user/register', payload)
       .then(() => {
         console.log('data sent');
       })
       .catch(() => {  
-        console.log('ERROR!');
+        console.log('ERROR');
       });
 
   };
@@ -67,7 +64,7 @@ export class App extends React.Component {
         <div className="App">
           {/* <Nav /> */}
           <div className="container-fluid">
-          <form onSubmit={this.submit} id="registerForm">
+          <div id="registerForm">
             <label>First Name</label> 
             <input type="text" value={this.state.firstName} onChange={this.handleChange} name="firstName" /> 
             <label>Last Name</label> 
@@ -327,8 +324,8 @@ export class App extends React.Component {
               </select> <br />
             <label>Password</label> 
             <input type="password" value={this.state.password} onChange={this.handleChange} name="password" /> 
-            <button className="registerbtn" type="submit">Register</button>
-          </form>
+            <button onClick={this.submit} className="registerbtn" type="submit">Registerxxxxxxxxxxxxxx  </button>
+          </div>
         </div>
 
         <div className="container signin">
@@ -337,11 +334,11 @@ export class App extends React.Component {
 
         </div>
         <Route exact path="/expenses" component={Expenses} />
-          <Route exact path="/products" component={Products} />
-          <Route exact path="/newproduct" component={NewProduct} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/editproduct" component={EditProduct} />
+        <Route exact path="/products" component={Products} />
+        <Route exact path="/newproduct" component={NewProduct} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/editproduct" component={EditProduct} />
       </Router>  
     )
   }

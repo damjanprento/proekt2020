@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //Import Routes
 const authRoute = require('./routes/auth');
@@ -16,12 +17,16 @@ useNewUrlParser: true,
 useUnifiedTopology: true }, () => console.log('Connected to DB!')
 );
 
+app.use(cors());
+
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Route Middlewares
 app.use('/api/user', authRoute);
+
+
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../build'));
