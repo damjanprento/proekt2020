@@ -324,7 +324,7 @@ export class App extends React.Component {
               </select> <br />
             <label>Password</label> 
             <input type="password" value={this.state.password} onChange={this.handleChange} name="password" /> 
-            <button onClick={this.submit} className="registerbtn" type="submit">Registerxxxxxxxxxxxxxx  </button>
+            <button onClick={this.submit} className="registerbtn" type="submit">Register</button>
           </div>
         </div>
 

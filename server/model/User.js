@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     dateOfBirth: {
         type: String
     },
-    telephone: {
+    mobile: {
         type: Number,
         requried: false,
         min: 6

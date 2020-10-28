@@ -9,7 +9,7 @@ const registerValidation = (data) => {
         lastName: Joi.string().min(3).required(),
         email: Joi.string().min(6).required().email(),
         dateOfBirth: Joi.string().required(),
-        telephone: Joi.number().min(6).required(),
+        mobile: Joi.number().min(6).required(),
         country: Joi.string().required(),
         password: Joi.string().min(6).required()
     });
