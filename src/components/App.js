@@ -19,7 +19,7 @@ export class App extends React.Component {
 
     return (
       <Router>
-        <Nav />
+        {/* <Nav /> */}
         <Route exact path="/expenses" component={Expenses} />
         <Route exact path="/products" component={Products} />
         <Route exact path="/newproduct" component={NewProduct} />

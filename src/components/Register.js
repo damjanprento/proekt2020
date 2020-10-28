@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/Register.css';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export class Register extends React.Component {
@@ -39,11 +41,12 @@ export class Register extends React.Component {
     axios.post('http://localhost:3001/api/user/register', payload)
       .then(() => {
         console.log('Data sent!');
+        setTimeout(() => {this.props.history.push('/login')}, 500)
       })
       .catch(() => {  
         console.log('ERROR');
       });
-
+    
   };
 
   render() {
@@ -317,7 +320,7 @@ export class Register extends React.Component {
         </div>
 
         <div className="container signin">
-          <p id="signIn">Or if you already have an account, <a href="Login.js">Sign in</a>.</p>
+          <p id="signIn">Or if you already have an account, <Link to='/login'>Sign in</Link>.</p>
         </div>
 
       </div>

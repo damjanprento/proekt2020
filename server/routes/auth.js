@@ -6,7 +6,7 @@ const {registerValidation, loginValidation } = require('../validation');
 const { valid } = require('@hapi/joi');
 
 router.post('/register', async (req, res) => {
-    console.log('neso');
+    
     //Validating data before making a user
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(res.send(error.details[0].message));
