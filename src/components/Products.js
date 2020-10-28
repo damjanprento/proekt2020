@@ -16,14 +16,14 @@ export class Products extends React.Component {
       <div>
 
         <div id="productsTable">
-          <div class="d-flex bd-highlight">
-            <div class="p-2 flex-grow-1">
+          <div className="d-flex bd-highlight">
+            <div className="p-2 flex-grow-1">
               <h1 id="productsHeader">Products</h1>
             </div>
-            <div class="p-2 bd-highlight">
+            <div className="p-2 bd-highlight">
               <span id="filter">Filter by:</span>
             </div>
-            <div class="p-2 bd-highlight">
+            <div className="p-2 bd-highlight">
               <select id="filterBy">
                 <option id="year">Year</option>
                 <option id="highestPrice">Highest Price</option>
@@ -33,8 +33,8 @@ export class Products extends React.Component {
             </div>
           </div>
           
-          <table class="tableProducts">
-            <thead class="elegant-color-dark white-text">
+          <table className="tableProducts">
+            <thead className="elegant-color-dark white-text">
               <tr>
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Type</th>

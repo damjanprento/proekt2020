@@ -16,10 +16,10 @@ export class NewProduct extends React.Component {
       <br /> <br />
       <h1 id="newProductHeader">New Product</h1>
        
-        <div class="newProductForm">
-            <div class="row">
+        <div className="newProductForm">
+            <div className="row">
 
-                <div class="col-xl-6 form">
+                <div className="col-xl-6 form">
                     <label>Product Name</label> <br />
                     <input type="text" id="productName"/> <br />
                     <label>Product Description</label> <br />
@@ -31,10 +31,10 @@ export class NewProduct extends React.Component {
                     <label>Product Price</label> <br />
                     <input type="text" id="productPrice"/> <br />
 
-                    <button class="addproductbtn">Create Product</button>
+                    <button className="addproductbtn">Create Product</button>
                 </div>
-                <div class="col-xl-6 add">
-                    <div class="centriraj"> 
+                <div className="col-xl-6 add">
+                    <div className="centriraj"> 
                         
                         <FontAwesomeIcon id="krugce" icon={faPlusCircle}></FontAwesomeIcon> <br />
                         

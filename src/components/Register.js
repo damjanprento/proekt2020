@@ -1,29 +1,70 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/Register.css';
+import axios from 'axios';
 
 
 export class Register extends React.Component {
 
+  state = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    dateOfBirth: '',
+    mobile: '',
+    country: '',
+    password: ''
+  }
+
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+
+    this.setState({ [name]: value });
+  };
+
+  submit = (event) => {
+    
+    event.preventDefault();
+
+    const payload = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      dateOfBirth: this.state.dateOfBirth,
+      mobile: this.state.mobile,
+      country: this.state.country,
+      password: this.state.password
+    };
+
+    axios.post('http://localhost:3001/api/user/register', payload)
+      .then(() => {
+        console.log('Data sent!');
+      })
+      .catch(() => {  
+        console.log('ERROR');
+      });
+
+  };
+
   render() {
     return (
         
-      <div id="app">
-        
-        <div className="container-fluid">
-          <form id="registerForm">
+      <div className="App">
+          {/* <Nav /> */}
+          <div className="container-fluid">
+          <div id="registerForm">
             <label>First Name</label> 
-            <input type="text" id="firstName"/> 
+            <input type="text" value={this.state.firstName} onChange={this.handleChange} name="firstName" /> 
             <label>Last Name</label> 
-            <input type="text" id="lastName"/> 
+            <input type="text" value={this.state.lastName} onChange={this.handleChange} name="lastName" /> 
             <label>E-mail</label> 
-            <input type="text" id="email"/> 
+            <input type="text" value={this.state.email} onChange={this.handleChange} name="email" /> 
             <label>Date of Birth</label> <br />
-            <input type="date" id="dateOfBirth"/> <br />
+            <input type="date" value={this.state.dateOfBirth} onChange={this.handleChange} name="dateOfBirth" /> <br />
             <label>Telephone</label> <br />
-            <input type="text" id="mobile"/> <br />
+            <input type="text" value={this.state.mobile} onChange={this.handleChange} name="mobile" /> <br />
             <label>Country</label> 
-            <select id="country" name="country" className="form-control">
+            <select id="country" value={this.state.country} onChange={this.handleChange} name="country" className="form-control">
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Åland Islands">Åland Islands</option>
                   <option value="Albania">Albania</option>
@@ -270,15 +311,15 @@ export class Register extends React.Component {
                   <option value="Zimbabwe">Zimbabwe</option>
               </select> <br />
             <label>Password</label> 
-            <input type="password" id="password"/> 
-            <button className="registerbtn" type="submit">Register</button>
-          </form>
+            <input type="password" value={this.state.password} onChange={this.handleChange} name="password" /> 
+            <button onClick={this.submit} className="registerbtn" type="submit">Register</button>
+          </div>
         </div>
 
         <div className="container signin">
           <p id="signIn">Or if you already have an account, <a href="Login.js">Sign in</a>.</p>
         </div>
-        
+
       </div>
     )
   }

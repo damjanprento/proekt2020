@@ -14,23 +14,23 @@ export class Expenses extends React.Component {
 
         <h1>Expenses</h1>
 
-            <div class="d-flex flex-row bd-highlight mb-4">
+            <div className="d-flex flex-row bd-highlight mb-4">
 
-                <div class="p-2 bd-highlight">
+                <div className="p-2 bd-highlight">
                     
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div className="btn-group btn-group-toggle" data-toggle="buttons">
                       <form>
                       <label>
                         <div id="kopcence1">
-                            <input class="switch" type="radio" id="monthly" name="switch" /> 
-                            <span class="btn-monthly">Monthly</span>
+                            <input className="switch" type="radio" id="monthly" name="switch" /> 
+                            <span className="btn-monthly">Monthly</span>
                         </div>
                         </label>
 
                         <label id="kopcence2">
                           <div>
-                            <input class="switch" type="radio" id="yearly" name="switch" /> 
-                            <span class="btn-yearly">Yearly</span>
+                            <input className="switch" type="radio" id="yearly" name="switch" /> 
+                            <span className="btn-yearly">Yearly</span>
                           </div>
                             
                         </label>
@@ -39,11 +39,11 @@ export class Expenses extends React.Component {
                     </div>
                 </div>
 
-                <div class="p-2 bd-highlight">
+                <div className="p-2 bd-highlight">
                     <span id="filter">Choose Month</span>
                 </div>
 
-                <div class="p-2 bd-highlight">
+                <div className="p-2 bd-highlight">
                     <select id="months">
                         <option id="january">January</option>
                         <option id="february">February</option>
@@ -62,8 +62,8 @@ export class Expenses extends React.Component {
 
             </div>
           
-          <table class="tableExpenses">
-            <thead class="elegant-color-dark white-text">
+          <table className="tableExpenses">
+            <thead className="elegant-color-dark white-text">
               <tr>
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Type</th>
