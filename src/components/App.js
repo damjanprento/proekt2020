@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -18,6 +18,7 @@ export class App extends React.Component {
     // console.log('State', this.state);
 
     return (
+      <div id="main">
       <Router>
         {/* <Nav /> */}
         <Route exact path="/expenses" component={Expenses} />
@@ -27,6 +28,8 @@ export class App extends React.Component {
         <Route exact path="/register" component={Register} />
         <Route exact path="/editproduct" component={EditProduct} />
       </Router>  
+      </div>
+      
     )
   }
 }

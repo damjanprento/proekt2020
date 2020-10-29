@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const User = require('../model/User');
+const Product = require('../model/Product');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const {registerValidation, loginValidation } = require('../validation');
+const {registerValidation, loginValidation, newProductValidation } = require('../validation');
 const { valid } = require('@hapi/joi');
 
 router.post('/register', async (req, res) => {
@@ -38,6 +39,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
+
 router.post('/login', async (req, res) => {
     //Validating data before logging a user
     const {error} = loginValidation(req.body);
@@ -55,7 +57,28 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
     res.header('auth-token', token).send(token);
 
-    
+    req.session.user = user;
+});
+
+router.post('/newproduct', async (req, res) => {
+
+    const {error} = newProductValidation(req.body);
+    if(error) return res.status(400).send(res.send(error.details[0].message));
+
+    //Create a new product
+    const product = new Product({
+        productName: req.body.productName,
+        productDescription: req.body.productDescription,
+        productType: req.body.productType,
+        purchaseDate: req.body.purchaseDate,
+        productPrice: req.body.productPrice
+    });
+    try {
+        const savedProduct = await product.save();
+        res.send({product: product._id});
+    } catch(err) {
+        res.status(400).send(err);
+    }
 });
 
 module.exports = router;

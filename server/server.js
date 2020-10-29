@@ -3,6 +3,10 @@ const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const router = require('express').Router();
+const User = require('./model/User');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 //Import Routes
 const authRoute = require('./routes/auth');
@@ -23,10 +27,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
 //Route Middlewares
 app.use('/api/user', authRoute);
-
-
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../build'));

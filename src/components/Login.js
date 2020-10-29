@@ -1,9 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/Login.css';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-
 
 export class Login extends React.Component {
 
@@ -11,6 +10,7 @@ export class Login extends React.Component {
     email: '',
     password: ''
   }
+
 
   handleChange = ({ target }) => {
     const { name, value } = target;
@@ -33,11 +33,13 @@ export class Login extends React.Component {
       })
       .catch(() => {  
         console.log('ERROR');
+        setTimeout(() => {this.props.history.push('/login')}, 500);
       });
 
   };
 
   render() {
+
     return (
       
       <div id="app">

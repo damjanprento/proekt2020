@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import '../styles/Products.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { Nav } from './Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,7 +15,7 @@ export class Products extends React.Component {
     return (
         
       <div>
-
+        <Nav />
         <div id="productsTable">
           <div className="d-flex bd-highlight">
             <div className="p-2 flex-grow-1">
@@ -52,9 +53,9 @@ export class Products extends React.Component {
                 <td>13.04.1998</td>
                 <td>25</td>
                 <td>
-                  <a href="#">
+                  <Link to='/editproduct'>
                     <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
+                  </Link>
                   <a href="#">
                     <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
                   </a>
@@ -67,9 +68,9 @@ export class Products extends React.Component {
                 <td>13.04.1998</td>
                 <td>25</td>
                 <td>
-                  <a href="#">
+                  <Link to='/editproduct'>
                     <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </a>
+                  </Link>
                   <a href="#">
                     <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
                   </a>

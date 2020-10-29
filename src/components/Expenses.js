@@ -3,13 +3,15 @@ import React from 'react';
 import '../styles/Expenses.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { Nav } from './Nav';
+
 export class Expenses extends React.Component {
 
   render() {
     return (
         
       <div>
-
+        <Nav />
         <div id="productsTable">
 
         <h1>Expenses</h1>

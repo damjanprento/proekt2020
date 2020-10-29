@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/NewProduct.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { Nav } from './Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,13 +14,14 @@ export class EditProduct extends React.Component {
     return (
         
       <div>
+        <Nav />
       <br /> <br />
       <h1 id="newProductHeader">Edit Product</h1>
        
         <div className="newProductForm">
             <div className="row">
 
-                <div className="col-xl-6">
+                <div className="col-xl-6 form">
                     <label>Product Name</label> <br />
                     <input type="text" id="productName"/> <br />
                     <label>Product Description</label> <br />
