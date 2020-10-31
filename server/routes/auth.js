@@ -5,6 +5,11 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation, newProductValidation } = require('../validation');
 const { valid } = require('@hapi/joi');
+const { db } = require('../model/User');
+const { response } = require('express');
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:3001/api/user";
 
 router.post('/register', async (req, res) => {
     
@@ -61,7 +66,6 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/newproduct', async (req, res) => {
-
     const {error} = newProductValidation(req.body);
     if(error) return res.status(400).send(res.send(error.details[0].message));
 
@@ -80,5 +84,28 @@ router.post('/newproduct', async (req, res) => {
         res.status(400).send(err);
     }
 });
+
+// router.route('/products').get(function (req, res){
+//     Product.find().toArray(function(err, result){
+//         if(err) console.log(err);
+//         console.log(result);
+//     });
+// });
+
+router.get('/products', (req, res) => {
+    MongoClient.connect(process.env.DB_CONNECT, { 
+        useNewUrlParser: true,
+        useUnifiedTopology: true },
+        function(err, db){
+        if(err) return err;
+        var dbo = db.db("semos");
+        dbo.collection("products").find().toArray(function(err, result){
+            if(err) console.log(err);
+            res.json(result);
+            db.close();
+        });
+    });
+}) 
+
 
 module.exports = router;

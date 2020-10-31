@@ -7,9 +7,59 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Nav } from './Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 
 
 export class Products extends React.Component {
+
+  state = {
+    productName: '',
+    productType: '',
+    productDescription: '',
+    purchaseDate: '',
+    productPrice: '',
+    posts: []
+  }
+
+  componentDidMount = () => {
+    this.getBlogPost();
+  }
+
+  getBlogPost = () => {
+    axios.get('http://localhost:3001/api/user/products')
+    .then((response) => {
+      const data = response.data;
+      this.setState({ posts: data });
+      console.log('Data received');
+      console.log(data);
+    })
+    .catch(() => {
+      console.log('Error retreiving data.');
+    });
+  }
+
+  displayBlogPost = (posts) => {
+    if(!posts) return null;
+
+    return posts.map((post, index) => ( 
+      <tr>
+        <td>{post.productName}</td>
+        <td>{post.productType}</td>
+        <td>{post.productDescription}</td>
+        <td>{post.purchaseDate}</td>
+        <td>{post.productPrice}</td>
+        <td>
+          <Link to='/editproduct'>
+           <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
+          </Link>
+          <a href="#">
+            <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
+          </a>
+        </td>
+      </tr>
+    ))
+  }
 
   render() {
     return (
@@ -46,39 +96,11 @@ export class Products extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <Link to='/editproduct'>
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </Link>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-                <td>
-                  <Link to='/editproduct'>
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                  </Link>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-                  </a>
-                </td>
-              </tr>
+              {this.displayBlogPost(this.state.posts)}
             </tbody>
           </table>
         </div>
+
 
         <Link to='/newproduct'>
           <button id="fixedButton">New Product</button>
