@@ -43,7 +43,7 @@ export class Products extends React.Component {
     if(!posts) return null;
 
     return posts.map((post, index) => ( 
-      <tr>
+      <tr key={post._id}>
         <td>{post.productName}</td>
         <td>{post.productType}</td>
         <td>{post.productDescription}</td>
@@ -100,7 +100,6 @@ export class Products extends React.Component {
             </tbody>
           </table>
         </div>
-
 
         <Link to='/newproduct'>
           <button id="fixedButton">New Product</button>

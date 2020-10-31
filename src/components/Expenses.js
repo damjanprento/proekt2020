@@ -4,8 +4,57 @@ import '../styles/Expenses.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { Nav } from './Nav';
+import axios from 'axios';
 
 export class Expenses extends React.Component {
+
+  state = {
+    productName: '',
+    productType: '',
+    productDescription: '',
+    purchaseDate: '',
+    productPrice: '',
+    posts: []
+  }
+
+  componentDidMount = () => {
+    this.getBlogPost();
+    this.totalPrice();
+  }
+
+  getBlogPost = () => {
+    axios.get('http://localhost:3001/api/user/products')
+    .then((response) => {
+      const data = response.data;
+      this.setState({ posts: data });
+      console.log(data);
+    })
+    .catch(() => {
+      console.log('Error retreiving data.');
+    });
+  }
+
+  displayBlogPost = (posts) => {
+    if(!posts) return null;
+
+    return posts.map((post, index) => ( 
+      <tr key={index}>
+        <td>{post.productName}</td>
+        <td>{post.productType}</td>
+        <td>{post.productDescription}</td>
+        <td>{post.purchaseDate}</td>
+        <td>{post.productPrice}</td>
+      </tr>
+    ))
+  }
+
+  totalPrice = () => {
+    var sum = 0;
+    for(var i=0; i < this.state.posts.length; i++){
+      sum = sum + parseInt(this.state.posts[i].productPrice);
+    }
+    return sum;
+  }
 
   render() {
     return (
@@ -19,25 +68,22 @@ export class Expenses extends React.Component {
             <div className="d-flex flex-row bd-highlight mb-4">
 
                 <div className="p-2 bd-highlight">
-                    
-                    <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                      <form>
-                      <label>
-                        <div id="kopcence1">
-                            <input className="switch" type="radio" id="monthly" name="switch" /> 
-                            <span className="btn-monthly">Monthly</span>
-                        </div>
-                        </label>
+                    <div className="nesoneso">
 
-                        <label id="kopcence2">
-                          <div>
-                            <input className="switch" type="radio" id="yearly" name="switch" /> 
-                            <span className="btn-yearly">Yearly</span>
-                          </div>
-                            
-                        </label>
-                      </form>
-                        
+                      <label id="kopcence1">
+                        <div >
+                            <input className="switch1" type="radio" id="monthly" name="switch" /> 
+                            <div className="btn-monthly">Monthly</div>
+                        </div>
+                      </label>
+
+                      <label id="kopcence2">
+                          <div >
+                            <input className="switch2" type="radio" id="yearly" name="switch" /> 
+                            <div className="btn-yearly">Yearly</div>
+                          </div>    
+                      </label>
+
                     </div>
                 </div>
 
@@ -75,25 +121,20 @@ export class Expenses extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>Coca-Cola</td>
-                <td>Drink</td>
-                <td>Carbonated Soft Drink</td>
-                <td>13.04.1998</td>
-                <td>25</td>
-              </tr>
-              
+              {this.state.posts.filter(el => {
+                let d = new Date(el.purchaseDate);
+                return d.getFullYear() === parseInt(this.state.year) && d.getMonth() === parseInt(this.state.month);
+                
+              })}
+              {this.displayBlogPost(this.state.posts)}
             </tbody>
           </table>
         </div>
-
+        
+        <div id="fixedPrice">
+          <span id="totalSpan">Total spent: {this.totalPrice()} den.</span>
+        </div>
+        
       </div>
     )
   }

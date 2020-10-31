@@ -105,7 +105,26 @@ router.get('/products', (req, res) => {
             db.close();
         });
     });
-}) 
+}) ;
+
+router.get('/updateproduct/:id', (req, res) => {
+    MongoClient.connect(process.env.DB_CONNECT, { 
+        useNewUrlParser: true,
+        useUnifiedTopology: true },
+        function(err, db){
+        if(err) return err;
+        var dbo = db.db("semos");
+        dbo.collection("products").find().toArray(function(err, result){
+            if(err) console.log(err);
+            res.json(result);
+            db.close();
+        });
+    });
+});
+
+router.delete('/deleteproduct', (req, res) => {
+
+});
 
 
 module.exports = router;

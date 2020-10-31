@@ -26,23 +26,41 @@ body {
 }
 
 #kopcence1, #kopcence2 {
-    padding-left: 15px;
+    padding-left: 0;
     width: 80px;
     height: 30px;
     background-color: #1DD1A1;
+    border-radius: 5px;
+}
+
+.btn-monthly, .btn-yearly {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 input#monthly:checked + .btn-monthly{
-    background-color: blue;
+    background-color:#1DD1A1;
 }
 
-input#yearly:checked + #kopcence2{
-    background-color: red;   
+input#yearly:checked + .btn-yearly{
+    background-color:#1DD1A1;   
 }
 
-.switch {
+input#monthly:not(:checked) + .btn-monthly{
+    background-color:#C9E5DD;
+}
+
+input#yearly:not(:checked) + .btn-yearly{
+    background-color:#C9E5DD;   
+}
+
+.switch1, .switch2 {
     display: none;
 }
+
+.switch1:default:checked
 
 #months {
     padding: 0;
@@ -98,3 +116,22 @@ h1 {
     margin-left: 80%;
 }
   
+#fixedPrice {
+    position: fixed;
+    background-color: black;
+    opacity: 0.4;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+}
+
+#totalSpan {
+    float: right;
+    margin-right: 40px;
+    padding-top: 15px;
+    font-size: 20px;
+}

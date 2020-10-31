@@ -21,12 +21,13 @@ export class App extends React.Component {
       <div id="main">
       <Router>
         {/* <Nav /> */}
-        <Route exact path="/expenses" component={Expenses} />
-        <Route exact path="/products" component={Products} />
-        <Route exact path="/newproduct" component={NewProduct} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/editproduct" component={EditProduct} />
+        <Route path="/expenses" component={Expenses} />
+        <Route path="/products" component={Products} />
+        <Route path="/newproduct" component={NewProduct} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/editproduct" component={EditProduct} />
+        <Route path="/editproduct/:id" component={EditProduct} />
       </Router>  
       </div>
       
